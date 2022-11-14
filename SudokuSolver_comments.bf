@@ -697,15 +697,15 @@ main loop
                     [->+<] copy i12 to i13
                     >> i14
                 ]
+                + increment 14
                 >> i16
 
             ] end of checking if 9 is valid
 
 
-
-                [ i16
+                <<-[+ i14 
                 check in row:
-                <<< <<< <<<  <<< <<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
+                <<< <<< <<<  <<<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
                 >>>[-<<<+>>>] copy i5 to i2
                 >>> >>> >>>  >> i16
 
@@ -1199,15 +1199,15 @@ main loop
                     [->+<] copy i12 to i13
                     >> i14
                 ]
+                ]+
                 >> i16
-                ]
             ] end of checking if 8 is valid
 
 
 
-                [ i16
+                <<-[+ i14 
                 check in row:
-                <<< <<< <<<  <<< <<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
+                <<< <<< <<<  <<<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
                 >>>[-<<<+>>>] copy i5 to i2
                 >>> >>> >>>  >> i16
 
@@ -1701,15 +1701,15 @@ main loop
                     [->+<] copy i12 to i13
                     >> i14
                 ]
+                ]+
                 >> i16
-                ]
             ] end of checking if 7 is valid
                 
 
 
-                [ i16
+                <<-[+ i14 
                 check in row:
-                <<< <<< <<<  <<< <<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
+                <<< <<< <<<  <<<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
                 >>>[-<<<+>>>] copy i5 to i2
                 >>> >>> >>>  >> i16
 
@@ -2203,16 +2203,16 @@ main loop
                     [->+<] copy i12 to i13
                     >> i14
                 ]
+                ]+
                 >> i16
-                ]
 
             ] end of checking if 6 is valid
                                 
 
 
-                [ i16
+                <<-[+ i14 
                 check in row:
-                <<< <<< <<<  <<< <<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
+                <<< <<< <<<  <<<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
                 >>>[-<<<+>>>] copy i5 to i2
                 >>> >>> >>>  >> i16
 
@@ -2706,16 +2706,16 @@ main loop
                     [->+<] copy i12 to i13
                     >> i14
                 ]
+                ]+
                 >> i16
-                ]
 
             ] end of checking if 5 is valid
                                                 
 
 
-                [ i16
+                <<-[+ i14 
                 check in row:
-                <<< <<< <<<  <<< <<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
+                <<< <<< <<<  <<<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
                 >>>[-<<<+>>>] copy i5 to i2
                 >>> >>> >>>  >> i16
 
@@ -3209,16 +3209,16 @@ main loop
                     [->+<] copy i12 to i13
                     >> i14
                 ]
+                ]+
                 >> i16
-                ]
 
             ] end of checking if 4 is valid
 
 
 
-                [ i16
+                <<-[+ i14 
                 check in row:
-                <<< <<< <<<  <<< <<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
+                <<< <<< <<<  <<<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
                 >>>[-<<<+>>>] copy i5 to i2
                 >>> >>> >>>  >> i16
 
@@ -3712,16 +3712,16 @@ main loop
                     [->+<] copy i12 to i13
                     >> i14
                 ]
+                ]+
                 >> i16
-                ]
 
             ] end of checking if 3 is valid
 
 
 
-                [ i16
+                <<-[+ i14 
                 check in row:
-                <<< <<< <<<  <<< <<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
+                <<< <<< <<<  <<<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
                 >>>[-<<<+>>>] copy i5 to i2
                 >>> >>> >>>  >> i16
 
@@ -4215,16 +4215,16 @@ main loop
                     [->+<] copy i12 to i13
                     >> i14
                 ]
+                ]+
                 >> i16
-                ]
 
             ] end of checking if 2 is valid
 
 
 
-                [ i16
+                <<-[+ i14 
                 check in row:
-                <<< <<< <<<  <<< <<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
+                <<< <<< <<<  <<<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
                 >>>[-<<<+>>>] copy i5 to i2
                 >>> >>> >>>  >> i16
 
@@ -4718,8 +4718,8 @@ main loop
                     [->+<] copy i12 to i13
                     >> i14
                 ]
+                -]+
                 >> i16
-                ]
             ] end of checking if 1 is valid
 
             <<[-] i14
@@ -4972,9 +4972,9 @@ sample code:
                 - decrement i14
                 >> i16
             ] end of checking if 9 is valid
-                [ i16
+                <<-[+ i14 
                 check for 8s in row:
-                <<< <<< <<<  <<< <<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
+                <<< <<< <<<  <<<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
                 >>>[-<<<+>>>] copy i5 to i2
                 >>> >>> >>>  >> i16
 
@@ -5072,12 +5072,12 @@ sample code:
                     [->+<] copy i12 to i13
                     >> i14
                 ]
+                ]+
                 >> i16
-                ]
             ] end of checking if 8 is valid
-                [ i16
+                <<-[+ i14 
                 check for 7s in row:
-                <<< <<< <<<  <<< <<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
+                <<< <<< <<<  <<<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
                 >>>[-<<<+>>>] copy i5 to i2
                 >>> >>> >>>  >> i16
 
@@ -5175,12 +5175,12 @@ sample code:
                     [->+<] copy i12 to i13
                     >> i14
                 ]
+                ]+
                 >> i16
-                ]
             ] end of checking if 7 is valid
-                [ i16
+                <<-[+ i14 
                 check for 6s in row:
-                <<< <<< <<<  <<< <<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
+                <<< <<< <<<  <<<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
                 >>>[-<<<+>>>] copy i5 to i2
                 >>> >>> >>>  >> i16
 
@@ -5278,12 +5278,12 @@ sample code:
                     [->+<] copy i12 to i13
                     >> i14
                 ]
+                ]+
                 >> i16
-                ]
             ] end of checking if 6 is valid
-                [ i16
+                <<-[+ i14 
                 check for 5s in row:
-                <<< <<< <<<  <<< <<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
+                <<< <<< <<<  <<<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
                 >>>[-<<<+>>>] copy i5 to i2
                 >>> >>> >>>  >> i16
 
@@ -5381,12 +5381,12 @@ sample code:
                     [->+<] copy i12 to i13
                     >> i14
                 ]
+                ]+
                 >> i16
-                ]
             ] end of checking if 5 is valid
-                [ i16
+                <<-[+ i14 
                 check for 4s in row:
-                <<< <<< <<<  <<< <<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
+                <<< <<< <<<  <<<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
                 >>>[-<<<+>>>] copy i5 to i2
                 >>> >>> >>>  >> i16
 
@@ -5484,12 +5484,12 @@ sample code:
                     [->+<] copy i12 to i13
                     >> i14
                 ]
+                ]+
                 >> i16
-                ]
             ] end of checking if 4 is valid
-                [ i16
+                <<-[+ i14 
                 check for 3s in row:
-                <<< <<< <<<  <<< <<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
+                <<< <<< <<<  <<<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
                 >>>[-<<<+>>>] copy i5 to i2
                 >>> >>> >>>  >> i16
 
@@ -5587,12 +5587,12 @@ sample code:
                     [->+<] copy i12 to i13
                     >> i14
                 ]
+                ]+
                 >> i16
-                ]
             ] end of checking if 3 is valid
-                [ i16
+                <<-[+ i14 
                 check for 2s in row:
-                <<< <<< <<<  <<< <<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
+                <<< <<< <<<  <<<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
                 >>>[-<<<+>>>] copy i5 to i2
                 >>> >>> >>>  >> i16
 
@@ -5690,12 +5690,12 @@ sample code:
                     [->+<] copy i12 to i13
                     >> i14
                 ]
+                ]+
                 >> i16
-                ]
             ] end of checking if 2 is valid
-                [ i16
+                <<-[+ i14 
                 check for 1s in row:
-                <<< <<< <<<  <<< <<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
+                <<< <<< <<<  <<<[->>>+>>> >>> >>>  >>+<<< <<< <<<  <<< <<] copy i2 to i5 and i16
                 >>>[-<<<+>>>] copy i5 to i2
                 >>> >>> >>>  >> i16
 
