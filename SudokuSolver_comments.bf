@@ -4718,12 +4718,11 @@ main loop
                     [->+<] copy i12 to i13
                     >> i14
                 ]
-                -]+
+                ]
                 >> i16
             ] end of checking if 1 is valid
 
-            <<[-] i14
-            < i13
+            <<< i13
         ]
     ]
 
