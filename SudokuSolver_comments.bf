@@ -37,8 +37,6 @@ input (input sudoku board from the top left with NO EXTRA CHARACTERS (eg newline
     <--- --- -- i259
 ] subtract ascii value of input by 48
 
-+[-<+]- i15
-
 
 
 
@@ -47,12 +45,12 @@ input (input sudoku board from the top left with NO EXTRA CHARACTERS (eg newline
 
 main loop
 [
-    +[->+]- i15
-    >+ increment i16
+    >>> >>> >>>  >>> >>>+ increment i16
+
 
     find the next cell that has a zero:
     [
-        [-]
+        -
         <<< <<< <<<  <<< <<< i1
         [>+>>> >>> >>>  >>> >>+<<< <<< <<<  <<< <<<-] copy i1 to i2 and i16
         > i2
@@ -89,24 +87,8 @@ main loop
         <<< <<< <<<  <<< <<< <<<  <<< <<< <<<    <<< <<< <<<  <<< <<< <<<  <<< <<< <<<    <<< <<< <<<  <<< <<< <<<  <<< <<< <<<
         +[-<+]-> i16
     ]
+    <<< <<< <<<  <<< <<<
 
-    save crrent cell number in cache:
-    <<< <<< <<<  <<< <<<i1
-    [
-        [->+<] copy i1 to i2
-        <<[<]<-
-        >+[->+]->> i2
-        [
-            - decrement i2
-            <+ increment i1
-            <<+[-<+]- goto cache ref
-            >+
-            +[->+]->> i2
-        ]
-        <<<[<]>+
-        +[->+]->>
-    ]
-    +[-<+]-> i1
 
     code to calculate row and col and block:
     [
@@ -191,6 +173,7 @@ main loop
         [-<+++>] add i5 x 3 to i4
     ]
     +[-<+]-> i1
+
 
     check all numbers' validity in the current cell
     [ i1
@@ -4725,11 +4708,32 @@ main loop
             <<< i13
         ]
     ]
-
     +[-<+]-> i1
+    
+    clear i2; i3; i4
+    >[-]>[-]>[-]
+    <<< i1
 
-
-    check if there is a valid number for current cell:
+    save crrent cell number in cache:
+    [
+        >>> >>> >>>  >>
+        [
+            <<< <<< 
+            [->+<] copy i1 to i2
+            <<[<]<-
+            >+[->+]->> i2
+            [
+                - decrement i2
+                <+ increment i1
+                <<+[-<+]- goto cache ref
+                >+
+                +[->+]->> i2
+            ]
+            <<<[<]>+
+            +[->+]->>
+        ]
+    ]
+    +[-<+]-> i1
 
 
     clear current cell:
@@ -4752,7 +4756,6 @@ main loop
         <<< <<< <<<  <<< <<< <<<  <<< <<< <<<    <<< <<< <<<  <<< <<< <<<  <<< <<< <<<    <<< <<< <<<  <<< <<< <<<  <<< <<< <<<
         +[-<+]-< i14
     ]
-
     +[-<+]-> i1
 
 
