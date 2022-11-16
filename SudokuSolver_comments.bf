@@ -4716,11 +4716,11 @@ main loop
     <<< i1
 
 
-    save crrent cell number in cache:
+    save current cell number in cache:
     [
-        >>> >>> >>>  >>
+        >>> >>> >>>  >> i12
         [
-            <<< <<< 
+            <<< <<< <<<  << i1
             [->+<] copy i1 to i2
             <<[<]<-
             >+[->+]->> i2
@@ -4761,7 +4761,26 @@ main loop
     +[-<+]-> i1
 
 
-    fill current cell:
+    fetch current cached cell (if needed):
+    >+ i2
+    >>> >>> >>>  > i12
+    [<<< <<< <<<  <->]
+    +[-<+]->> i2
+    [
+        -
+        <[-] clear i1
+        <<<[<]>
+        [
+            -
+            +[->+]->+ increment i1
+            [<]>
+        ]
+        +[->+]->>
+    ]
+    +[-<+]-> i1
+
+
+    fill current cell (if needed):
     [
         >>> >>> >>>  >> i12
         [
