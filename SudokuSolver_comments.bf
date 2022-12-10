@@ -38,9 +38,8 @@ input (input sudoku board from the top left with NO EXTRA CHARACTERS (eg newline
 ] subtract ascii value of input by 48
 
 
-
-
 +[-<+]-<+[-<+]-> i1
+
 
 
 main loop
