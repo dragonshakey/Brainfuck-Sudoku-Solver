@@ -4770,7 +4770,7 @@ main loop
             -
             >>> >>> >>>  >>> >>- decrement i16
             <<< <<< <<<  <<< <<<[-] clear i1
-            <<<[<]- set chache ref
+            <<<[<]- set cache ref
             >
             [
                 +[->+]->+ increment i1
