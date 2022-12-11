@@ -4698,7 +4698,6 @@ main loop
                 [
                     [-] 14
                     <<- decrement i12
-                    [->+<] copy i12 to i13
                     >> i14
                 ]
                 ]
