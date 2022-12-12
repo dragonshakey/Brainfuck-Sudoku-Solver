@@ -10,5 +10,5 @@ Interpreters I use:
 ---
   
 notes:  
-- the project itself is not yet functional and does not work  
-- SudokuSolver.bf is not updated to the current version  
+- the program currently works on SOME sudokus i have tested
+- SudokuSolver.bf is not updated to the current version
