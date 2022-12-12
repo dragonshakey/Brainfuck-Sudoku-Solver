@@ -1,12 +1,12 @@
 the cache is where we will put the number of the cells we have filled 
 in case we need to back track to a cell we have modified we can accsess that cell via the cache
->>> >>> >>>  >>> >>> >>>  >>> >>> >>>    >>> >>> >>>  >>> >>> >>>  >>> >>> >>>    >>> >>> >>>  >>>
+>>> >>> >>>  >>> >>> >>>  >>> >>> >>>    >>> >>> >>>  >>> >>> >>>  >>> >>> >>>    >>> >>> >>>  >>> >>
 give empty spce for to cache the cell locations
 
 the home ref allows us to return to this spot in memory
 the home ref marks the end of the memory dedicated for the cache
 and the start of the memory that is dedicated for calculations and such
-i0 = index 66
+i0 = index 68
 - home ref at i0
 
 generate the number 81
@@ -60,7 +60,6 @@ main loop
 [
     increment to start the loop to find and empty cell
     >>> >>> >>>  >>> >>>+ increment i16
-
 
     find the next cell that has a zero:
     [
