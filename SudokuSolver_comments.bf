@@ -89,8 +89,8 @@ main loop
             <<< <<< <<<  <<< <<< <<<  <<< <<< <<<    <<< <<< <<<  <<< <<< <<<  <<< <<< <<<    <<< <<< <<<  <<< <<< <<<  <<< <<< <<<
             +[-<+]- i15
             <<< <<< <<<  <<< << i1
+            - decrement i1
             [
-                - decrement i1
                 if cell is not empty than increment i16 to loop again
                 >>> >>> >>>  >>> >>>+ increment i16
                 > i17
