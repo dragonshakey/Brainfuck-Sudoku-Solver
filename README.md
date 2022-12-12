@@ -6,9 +6,7 @@ This program is quite complex and REEEEEEALLY long, and some point i would also 
 I would really appreciate people contributing (especially to make the program more efficient) too, since there are some parts that are contained within themselves.  
 Also really sorry if the commits and the merge history is messy, its my first time using Git and GitHub 
 
-Interpreters I use:  
-<https://minond.xyz/brainfuck/>  
-<https://www.nayuki.io/page/brainfuck-interpreter-javascript>  
+Interpreters I use: <https://www.nayuki.io/page/brainfuck-interpreter-javascript>  
 
 ---
   
