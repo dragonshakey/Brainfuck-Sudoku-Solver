@@ -1,29 +1,43 @@
+the cache is where we will put the number of the cells we have filled 
+in case we need to back track to a cell we have modified we can accsess that cell via the cache
 >>> >>> >>>  >>> >>> >>>  >>> >>> >>>    >>> >>> >>>  >>> >>> >>>  >>> >>> >>>    >>> >>> >>>  >>>
-generate cache
+give empty spce for to cache the cell locations
+
+the home ref allows us to return to this spot in memory
+the home ref marks the end of the memory dedicated for the cache
+and the start of the memory that is dedicated for calculations and such
 i0 = index 66
 - home ref at i0
 
+generate the number 81
+this number is the number of cells in the sudoku board and the last cell in the board
+81 is the cell location we will be starting from and from 81 we will go down
 >> i2
 +++ +++ +++
 [
     < i1
     +++ +++ +++
     >- i2
-] set i1 to 81
+]
 
+ref that marks the end of the memory section dedicated for calculations and the start of the memory dedicated for the dummy board
+the dummy boad is a part of memory that is completely empty for the sake of accessing the actual memory that stores the board state 
 >>> >>> >>> >>>>
 - main ref at i15
 
+ref that marks the end of the memory section for dummy board and the start of the memory dedicated for the board state
+around each borad cell there are two empty cells for the sake of calculations and marking particular cells
 >>> >>> >>>  >>> >>> >>>  >>> >>> >>>    >>> >>> >>>  >>> >>> >>>  >>> >>> >>>    >>> >>> >>>  >>> >>> >>>  >>> >>> >>>
 >>> >>> >>>  >>> >>> >>>  >>> >>> >>>    >>> >>> >>>  >>> >>> >>>  >>> >>> >>>    >>> >>> >>>  >>> >>> >>>  >>> >>> >>>
 >>> >>> >>>  >>> >>> >>>  >>> >>> >>>    >>> >>> >>>  >>> >>> >>>  >>> >>> >>>    >>> >>> >>>  >>> >>> >>>  >>> >>> >>>   >>
 - board ref at i260
 
-input (input sudoku board from the top left with NO EXTRA CHARACTERS (eg newline or enter or return; space; etc)):
+get input (input sudoku board from the top left with NO EXTRA CHARACTERS (eg newline or enter or return; space; etc)):
 >> i262
 ,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>
 ,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,>>>,
 
+convert the ascii values to to the numbers themselves of the sudoku/input
 +[-<+]- i260
 <<+++ +++ i258
 [>+++ +++ ++<-]> set i259 to 48
@@ -44,6 +58,7 @@ input (input sudoku board from the top left with NO EXTRA CHARACTERS (eg newline
 
 main loop
 [
+    increment to start the loop to find and empty cell
     >>> >>> >>>  >>> >>>+ increment i16
 
 
@@ -57,6 +72,7 @@ main loop
         >>> >>> >>>  >>> >> i16
         set i16 to cell counter
 
+        use cell number to go to the cell itself
         [-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[
         -[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-
         >>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]>>>]
@@ -65,8 +81,8 @@ main loop
         >>> >>> >>>  >>> >>> >>>  >>> >>> >>>    >>> >>> >>>  >>> >>> >>>  >>> >>> >>>    >>> >>> >>>  >>> >>> >>>  >>> >>> >>>
         >>> >>> >>>  >>> >>> >>>  >>> >>> >>>    >>> >>> >>>  >>> >>> >>>  >>> >>> >>>    >>> >>> >>>  >>> >>> >>>  >>> >>> >>>
         >>> >>> >>>  >>> >>> >>>  >>> >>> >>>    >>> >>> >>>  >>> >>> >>>  >>> >>> >>>    >>> >>> >>>  >>> >>> >>>  >>> >>> >>>
-        go to current board cell
 
+        check if the current cell is empty
         [
             <<< <<< <<<  <<< <<< <<<  <<< <<< <<<    <<< <<< <<<  <<< <<< <<<  <<< <<< <<<    <<< <<< <<<  <<< <<< <<<  <<< <<< <<<
             <<< <<< <<<  <<< <<< <<<  <<< <<< <<<    <<< <<< <<<  <<< <<< <<<  <<< <<< <<<    <<< <<< <<<  <<< <<< <<<  <<< <<< <<<
@@ -75,6 +91,7 @@ main loop
             <<< <<< <<<  <<< << i1
             [
                 - decrement i1
+                if cell is not empty than increment i16 to loop again
                 >>> >>> >>>  >>> >>>+ increment i16
                 > i17
             ]
@@ -89,7 +106,7 @@ main loop
     <<< <<< <<<  <<< <<< i1
 
 
-    code to calculate row and col and block:
+    calculates the row and col and block of the current:
     [
         code to calculate row and col:
         [->>>+>+<<< <] copy i1 to i4 and i5
@@ -174,7 +191,7 @@ main loop
     +[-<+]-> i1
 
 
-    check all numbers' validity in the current cell
+    check each digit's validity in the current cell:
     [ i1
         >>> >>> >>>  >>>
         +++ +++ +++ increment 9 i13
