@@ -1,4 +1,4 @@
-# Sudoku-Solver
+# Brainfuck Sudoku Solver
 If you don't know what this is, this is a Sudoku solver implemented in Brainfuck. Brainfuck is an esoteric programming language that is known for its minamilism, as it uses only eight comands: > < + - . , \[ \]  (for more information <https://en.wikipedia.org/wiki/Brainfuck>)  
 With only these i made a program that can solve a Sudoku.
 
